@@ -27,8 +27,7 @@
             <td>{{ heroe.poder }}</td>
             <td>
 
-                <label *ngIf="heroe.vivo" class="badge badge-success">Vivo</label>
-                <label *ngIf="!heroe.vivo" class="badge badge-danger">Muerto</label>
+                <label [ngClass]=" heroe.vivo ? 'badge badge-success' : 'badge badge-danger' ">{{ heroe.vivo ? 'Vivo' : 'Muerto' }}</label>
 
             </td>
             <td>
