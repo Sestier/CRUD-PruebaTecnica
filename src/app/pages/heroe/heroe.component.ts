@@ -14,10 +14,12 @@ import Swal from 'sweetalert2';
 })
 export class HeroeComponent implements OnInit {
 
-  heroe = new HeroeModel();
+  heroe: HeroeModel;
 
   constructor( private heroesService: HeroesService,
-               private route: ActivatedRoute ) {}
+               private route: ActivatedRoute ) {
+                this.heroe = new HeroeModel();
+               }
 
   ngOnInit() {
 
